@@ -27,10 +27,10 @@
                 <p class="text-[#40b751] tracking-widest text-center uppercase font-bold text-xs">
                     contact
                 </p>
-                <p style="text-shadow:3px 6px 6px #c9c9c9;"
+                <h1 style="text-shadow:3px 6px 6px #c9c9c9;"
                     class="text-[#40b751] font-sans text-center font-semibold pb-1 text-[28px] md:text-[32px] lg:text-[43px] [text-shadow:3px 6px 6px #c9c9c9]">
                     Get In Touch
-                </p>
+                </h1>
                 <p class="text-gray-600 text-center leading-7 max-w-lg">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a, nulla incidunt eaque sit
                     praesentium porro consectetur optio!
@@ -109,7 +109,7 @@
 
                     <button type="submit"
                         class=" px-6 py-2.5 bg-[#40b751] text-white text-xs leading-tight  uppercase rounded shadow-md hover:bg-transparent  hover:text-[#40b751] tracking-wide border border-[#40b751] hover:border-[#40b751]
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition  duration-150 ease-in-out"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition  duration-150 ease-in-out"
                         @click="contact_us()">submit
                     </button>
 
@@ -129,19 +129,25 @@
                         <div class="bg-zinc-100 rounded-full w-10 h-10 float-left bg-center  grid justify-items-center  ">
                             <img class="p-1 mt-2 h-6" src="../../src/assets/Inter/img/icon/phonecall.png" />
                         </div>
-                        <p class="cursor-pointer text-[#40b751] mb-2 pt-2 pl-14">+ 1 291 2909 392</p>
+                        <a href="#">
+                            <p class="cursor-pointer text-[#40b751] mb-2 pt-2 pl-14">+ 1 291 2909 392</p>
+                        </a>
                     </div>
                     <div class="pb-4">
                         <div class="bg-zinc-100 rounded-full w-10 h-10 float-left grid justify-items-center  ">
                             <img class="p-1 mt-2 h-6" src="../../src/assets/Inter/img/icon/email1.png" />
                         </div>
-                        <p class="cursor-pointer text-[#40b751] mb-2 pt-2 pl-14">info@mydomain.com</p>
+                        <a href="#">
+                            <p class="cursor-pointer text-[#40b751] mb-2 pt-2 pl-14">info@mydomain.com</p>
+                        </a>
                     </div>
                     <div class="pb-4">
                         <div class="bg-zinc-100 rounded-full w-10 h-10 float-left  grid justify-items-center  ">
                             <img class="p-1 mt-2 h-6" src="../../src/assets/Inter/img/icon/worldwide.png" />
                         </div>
-                        <p class="cursor-pointer text-[#40b751] mb-2 pt-2 pl-14">https://mywebsite.com</p>
+                        <a href="#">
+                            <p class="cursor-pointer text-[#40b751] mb-2 pt-2 pl-14">https://mywebsite.com</p>
+                        </a>
                     </div>
                 </div>
 

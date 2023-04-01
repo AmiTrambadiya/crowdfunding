@@ -102,37 +102,36 @@
       <div
         class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 sm:gap-auto md-gap:4 lg:gap-auto pb-5 md:pb-10 lg:pb-2 px-0 py-0 ">
         <div class="sm:col-span-2 md:col-span-2 lg:col-auto">
-          <h2 class="font-medium md:font-semibold lg:font-normal text-white mb-6 text-[20px] md:text-2xl lg:text-xl mb-4">
+          <h2 class="font-bold text-white mb-6 text-xl mb-4">
             About</h2>
           <p class="text-whitetext-gray-500 -pr-[200px] dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
             adipisicing elit. Modi cumque tenetur inventore veniam, hic vel
             ipsa necessitatibus ducimus architecto fugiat!</p>
           <div class="my-5 pr-4">
-            <div class="flex mt-4 space-x-6 mt-12">
+            <div class="flex  space-x-6 mt-8">
               <a href="#" class="text-gray-400 text-white">
                 <img class="w-4 h-4" src="../../src/assets/Inter/img/facebook.svg" />
-                <span class="sr-only">Facebook page</span>
+                <p class="sr-only">Facebook page</p>
               </a>
               <a href="#" class="text-gray-400 text-white">
                 <img class="w-4 h-4" src="../../src/assets/Inter/img/twitter.svg" />
-                <span class="sr-only">Twitter page</span>
+                <p class="sr-only">Twitter page</p>
               </a>
               <a href="#" class="text-gray-400 text-white">
                 <img class="w-4 h-4 " src="../../src/assets/Inter/img/insta.svg" />
-                <span class="sr-only">Instagram page</span>
+                <p class="sr-only">Instagram page</p>
               </a>
               <a href="#" class="text-gray-400 text-white">
                 <img class="w-4 h-4" src="../../src/assets/Inter/img/linkedin.svg" />
-                <span class="sr-only">Linkedin account</span>
+                <p class="sr-only">Linkedin account</p>
               </a>
             </div>
           </div>
         </div>
         <div class="sm:pl-[0px] md:pl-[0px] lg:pl-[60px] md:pb-10 sm:pb-10 ">
-          <h2
-            class="font-medium md:font-semibold lg:font-normal text-white mb-6 text-[20px] md:text-2xl lg:text-xl mb-4 pt-10 md:pt-5 lg:pt-0">
+          <h2 class="font-bold text-white mb-6 text-xl mb-4 pt-10 md:pt-5 lg:pt-0">
             Quick Links</h2>
-          <ul class="lg:font-semibold text-whitetext-gray-500 dark:text-gray-400">
+          <ul class="text-white">
             <li class="sm:mb-2 md:mb-2 lg:mb-4">
               <a href="#">Symptoms</a>
             </li>
@@ -151,10 +150,9 @@
           </ul>
         </div>
         <div class="sm:pl-[0px] md:pl-[0px] lg:pl-[50px] sm:pr-28 md:pr-32 lg:pr-0">
-          <h2
-            class="font-medium md:font-bold lg:font-normal text-white mb-6 text-[20px]  md:text-2xl lg:text-xl mb-4 pt-10 md:pt-5 lg:pt-0">
+          <h2 class="font-bold text-white mb-6 text-xl mb-4 pt-10 md:pt-5 lg:pt-0">
             Helpful Link</h2>
-          <ul class="lg:font-semibold text-whitetext-gray-500 dark:text-gray-400">
+          <ul class="text-white">
             <li class="sm:mb-1 md:mb-2 lg:mb-4 xl:mb-4">
               <a href="#">Helathcare Professional</a>
             </li>
@@ -170,10 +168,9 @@
           </ul>
         </div>
         <div class="sm:pl-[0px] md:pl-[0px] lg:pl-[60px]">
-          <h2
-            class="sm:font-semibold md:font-semibold lg:font-normal text-white mb-6 text-[20px] md:text-2xl lg:text-xl mb-4 pt-10 md:pt-5 lg:pt-0">
+          <h2 class="font-bold text-white mb-6 text-xl mb-4 pt-10 md:pt-5 lg:pt-0">
             Resources</h2>
-          <ul class="lg:font-semibold text-whitetext-gray-500 dark:text-gray-400">
+          <ul class="text-white">
             <li class="sm:mb-1 md:mb-2 lg:mb-4 xl:mb-4">
               <a href="#">WHO Website</a>
             </li>

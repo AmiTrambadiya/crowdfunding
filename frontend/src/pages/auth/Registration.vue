@@ -3,15 +3,16 @@
     <div class="container mx-auto h-full pb-[48px]">
         <div class="absolute bg-bottom bg-x-center bg-y-bottom bg-no-repeat z-1 top-96 sm:h-0 md:h-0 lg:h-0 xl:h-[630px] sm:w-0 md:w-0 lg:w-0 xl:w-96 sm:right-0 md:right-5 lg:right-16 bg-no-repeat opacity-40 bg-white bg-contain bg-no-repeat"
             style="
-                                                                                                                                                                                                                                                                                                                                                                                                                                 background-image: url('https://crowdfunding.frappe.cloud/files/bg-tree.png');
-                                                                                                                                                                                                                                                                                                                                                                                                                              ">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                 background-image: url('https://crowdfunding.frappe.cloud/files/bg-tree.png');
+                                                                                                                                                                                                                                                                                                                                                                                                                                              ">
         </div>
         <div class="w-full sm:pt-0 md:pt-5 lg:pt-12">
             <div class="container mx-auto py-0">
                 <div class="w-4/6 lg:w:4/6 mx-auto bg-white">
-                    <div class="text-[20px] md:text-[30px] lg:text-[36px] py-8 px-10 text-gray-600 text-bold text-center">
+                    <h1
+                        class="text-[20px] md:text-[30px] lg:text-[36px] font-semibold py-8 px-10 text-gray-600 text-bold text-center">
                         Donor Registration
-                    </div>
+                    </h1>
                     <div class="relative z-0">
                         <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
                             <div class="mr-2">

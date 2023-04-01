@@ -16,7 +16,7 @@
                 <input v-model="email" type="email"
                   class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                   placeholder="Email" required />
-
+                <p class="text-red-600">{{ emailError }}</p>
               </div>
 
               <div class="relative w-full mb-3">
@@ -26,6 +26,7 @@
                 <input v-model="password" type="password"
                   class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                   placeholder="Password" required />
+                <p class="text-red-600">{{ passwordError }}</p>
 
               </div>
               <p class="text-red-600">{{ errorMsg }}</p>
@@ -142,7 +143,8 @@ export default {
       // google,
       password: "",
       error: false,
-      errorMsg: '',
+      passwordError: '',
+      emailError: '',
       email: "",
       isLogin: false
     };
@@ -153,7 +155,15 @@ export default {
         method: "/api/method/login",
         // method: '/api/method/frappe.integrations.oauth2.get_token',
         onSuccess: async () => {
-          this.$router.push(`/sadbhavna`);
+          var route = this.$cookies.get('route');
+          console.log("route", route)
+          if (route != null) {
+            this.$router.go(-2)
+            // this.$router.push(route)
+          }
+          else {
+            this.$router.push(`/sadbhavna`);
+          }
         },
         onError: (error) => {
           this.$toast({
@@ -198,48 +208,19 @@ export default {
     // }
   },
   methods: {
-    validEmail: function (email) {
-      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(email);
-    },
-    validPassword: function (password) {
-      var re = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
-      return re.test(password);
-    },
     login() {
-      // if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      //   this.error = ''
-      // } else {
-      //   this.error = 'Email or Password incorrect!'
-      // }
-
-
-      // if (this.email == '') {
-      //   this.error = 'Email or Password incorrect!'
-      // }
-
-      // if (this.password == '') {
-      //   this.error = 'Email or Password incorrect!'
-      // }
-
-      // if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      //   this.errorMsg = 'Email or Password incorrect!'
-      //   this.error = true
-      //   console.log('email')
-      // }
-
-
-
-
-      if (this.email == '' || !this.validEmail(this.email)) {
+      if (!this.email && !this.password) {
+        this.error == true
+      }
+      else if (this.email == '') {
         // this.email_id == this.error
-        this.errorMsg = 'Email or Password incorrect!'
+        this.emailError = 'Please enter email!'
         this.error = true
         console.log('email')
       }
-      else if (this.password == '' || !this.validPassword(this.password)) {
+      else if (this.password == '') {
         // this.email_id == this.error
-        this.errorMsg = 'Email or Password incorrect!'
+        this.passwordError = 'Please enter password!'
         this.error = true
         console.log('password')
       }
@@ -250,6 +231,24 @@ export default {
           pwd: this.password,
         });
       }
+
+      // if (this.email == '') {
+      //   // this.email_id == this.error
+      //   this.errorMsg = 'Please enter email!'
+      //   this.error = true
+      // }
+      // else if (this.password == '') {
+      //   // this.email_id == this.error
+      //   this.errorMsg = 'Please enter password!'
+      //   this.error = true
+      // }
+      // else {
+      // this.error == false
+      // this.$resources.login.submit({
+      //   usr: this.email,
+      //   pwd: this.password,
+      // });
+      // }
 
       // axios.get('/api/method/login', {
       //   params: {

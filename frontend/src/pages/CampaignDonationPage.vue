@@ -9,16 +9,16 @@
                     campaign_detail.data.campaign_title }}</h2>
             <p style="line-height:1.7;" class="mb-4 text-base text-[#364958] font-normal">{{
                 campaign_detail.data.short_description }}</p>
-            <div class="mb-[50px]">
+            <div class="mb-[50px] flex flex-wrap">
                 <span
-                    class="bg-[#40b751] mr-[4px] capitalize text-white  py-[7px] px-[18px] md:px-[20px] lg:px-[20px] rounded-[10px]">Tax
-                    Benefit</span>
+                    class="mb-2 bg-[#40b751] mr-[4px] capitalize text-white  py-[7px] px-[18px] md:px-[20px] lg:px-[20px] rounded-[10px]">
+                    Tax Benefit</span>
                 <span
-                    class="bg-[#40b751] mr-[4px] capitalize text-white py-[7px] px-[18px] md:px-[20px] lg:px-[20px]  rounded-[10px]">
+                    class="mb-2 bg-[#40b751] mr-[4px] capitalize text-white py-[7px] px-[18px] md:px-[20px] lg:px-[20px]  rounded-[10px]">
                     Assured</span>
                 <span
-                    class="bg-[#40b751] mr-[4px] capitalize text-white py-[7px] px-[18px] md:px-[20px] lg:px-[20px]  rounded-[10px]">Old
-                    Ages</span>
+                    class="mb-2 bg-[#40b751] mr-[4px] capitalize text-white py-[7px] px-[18px] md:px-[20px] lg:px-[20px] rounded-[10px]">
+                    Old Ages</span>
             </div>
             <div class="flex flex-wrap mt-6 mb-5">
                 <img class="object-fill w-full mb-4" :src="campaign_detail.data.campain_image">
@@ -35,20 +35,19 @@
                             {{ (campaign_detail.data.raised_amount * 100 / campaign_detail.data.donation_amount).toFixed(2)
                             }}%</div>
                     </div>
-                    <div class="pt-4 pb-2 mt-[4px] mb-[6px] flex text-[#364958] font-bold">
-                        <p class="lg:w-3/12"> {{ numberWithCommas(total_donors) }} Donors</p>
-                        <p class="lg:w-3/12"> {{ campaign_days }} Days Left</p>
 
-                        <div class="flex lg:w-6/12 justify-between">
+
+                    <!-- <div class="pt-4 pb-2 mt-[4px] mb-[6px] flex flex-wrap text-[#364958] font-bold">
+                        <div class="lg:w-3/12 md:3/12 sm: 6/12 flex">
+                            <p class="flex mr-5"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users mr-2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>{{ numberWithCommas(total_donors) }} Donors</p>
+                            <p class="flex"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock mr-2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> {{ campaign_days }} Days Left</p>
+                        </div>
+                        <div class="flex lg:w-6/12 md:6/12 sm:6/12 justify-between">
                             <p></p>
                             <p>facebook</p>
                             <p>twitter</p>
                             <p>whatsapp</p>
-                            <p>link</p>
-                            <!-- <p class="lg:w-3/12">facebook</p>
-                                <p class="lg:w-3/12">whatsapp</p>
-                                <p class="lg:w-3/12">link</p> -->
-
+                            <p>link</p> -->
                             <!-- <a href="#" class="text-gray-400 text-white">
                                 <img class="w-4 h-4" src="../../src/assets/Inter/img/facebook.svg" />
                                 <span class="sr-only">Facebook page</span>
@@ -65,18 +64,36 @@
                                 <img class="w-4 h-4" src="../../src/assets/Inter/img/linkedin.svg" />
                                 <span class="sr-only">Linkedin account</span>
                                 </a> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+
+
+                    <div class="flex flex-wrap mt-2 justify-between">
+                        <div class="flex flex-wrap">
+                            <p class="flex mr-5"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users mr-2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>{{ numberWithCommas(total_donors) }} Donors</p>
+                            <p class="flex"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock mr-2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> {{ campaign_days }} Days Left</p>
+                
+                        </div>
+                        <div class="flex flex-wrap">
+                            <div class="bg-blue-700 rounded-full h-10 w-10 sm:ml-2 pt-2 pb-1 pl-2 pr-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            </div> 
+                            <div class="bg-sky-400 rounded-full h-10 w-10 ml-2 pt-2 pb-1 pl-2 pr-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                            </div>
+                            <div class="bg-[#40b751] rounded-full h-10 w-10 ml-2 pt-2 pb-1 pl-2 pr-1">
+                                <svg fill="#000000" height="24" width="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 308 308" xml:space="preserve"><g id="XMLID_468_"><path id="XMLID_469_" d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156 c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687 c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887 c0.088-0.323,0.898-1.135,1.316-1.554c1.223-1.21,2.548-2.805,3.83-4.348c0.607-0.731,1.215-1.463,1.812-2.153 c1.86-2.164,2.688-3.844,3.648-5.79l0.503-1.011c2.344-4.657,0.342-8.587-0.305-9.856c-0.531-1.062-10.012-23.944-11.02-26.348 c-2.424-5.801-5.627-8.502-10.078-8.502c-0.413,0,0,0-1.732,0.073c-2.109,0.089-13.594,1.601-18.672,4.802 c-5.385,3.395-14.495,14.217-14.495,33.249c0,17.129,10.87,33.302,15.537,39.453c0.116,0.155,0.329,0.47,0.638,0.922 c17.873,26.102,40.154,45.446,62.741,54.469c21.745,8.686,32.042,9.69,37.896,9.69c0.001,0,0.001,0,0.001,0 c2.46,0,4.429-0.193,6.166-0.364l1.102-0.105c7.512-0.666,24.02-9.22,27.775-19.655c2.958-8.219,3.738-17.199,1.77-20.458 C233.168,179.508,230.845,178.393,227.904,176.981z"/><path id="XMLID_470_" d="M156.734,0C73.318,0,5.454,67.354,5.454,150.143c0,26.777,7.166,52.988,20.741,75.928L0.212,302.716 c-0.484,1.429-0.124,3.009,0.933,4.085C1.908,307.58,2.943,308,4,308c0.405,0,0.813-0.061,1.211-0.188l79.92-25.396 c21.87,11.685,46.588,17.853,71.604,17.853C240.143,300.27,308,232.923,308,150.143C308,67.354,240.143,0,156.734,0z M156.734,268.994c-23.539,0-46.338-6.797-65.936-19.657c-0.659-0.433-1.424-0.655-2.194-0.655c-0.407,0-0.815,0.062-1.212,0.188 l-40.035,12.726l12.924-38.129c0.418-1.234,0.209-2.595-0.561-3.647c-14.924-20.392-22.813-44.485-22.813-69.677 c0-65.543,53.754-118.867,119.826-118.867c66.064,0,119.812,53.324,119.812,118.867 C276.546,215.678,222.799,268.994,156.734,268.994z"/> </g></svg>                            
+                            </div>
+                            <div class="bg-gray-600 rounded-full h-10 w-10 ml-2 pt-2 pb-1 pl-2.5 pr-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                            </div>
                         </div>
                     </div>
-                    <!-- <pre> -->
-                    <!-- <code> -->
-                    <!-- <p style="line-height:1.7;" class="text-[#364958] mb-5">
-                        {{ campaign_detail.data.about_campaign }}
-                    </p> -->
 
 
-                    <!-- <div style="font-size: 2rem;" class="text-gray-600">Product</div> -->
 
 
+        
                     <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-3 mt-6">
                         <div class="pb-4" v-for="products in campaign_detail.data.add_campaign_items">
                             <!-- {{ products }} -->
@@ -471,9 +488,9 @@
 
                                                         <div>
                                                             <p v-if="donation.anonymous != 1"
-                                                                class=" text-gray-900 leading-none text-lg font-bold">{{
+                                                                class=" text-gray-900 leading-none text-lg">{{
                                                                     donation.donor_name }}</p>
-                                                            <p v-else class="text-gray-900 leading-none text-lg font-bold">
+                                                            <p v-else class="text-gray-900 leading-none text-lg">
                                                                 Anonymous</p>
                                                             <p class="text-gray-600 text-sm">{{ formatDate(donation.date) }}
                                                             </p>
@@ -506,9 +523,9 @@
 
                                                         <div>
                                                             <p v-if="m_donation.anonymous != 1"
-                                                                class=" text-gray-900 leading-none text-lg font-bold">{{
+                                                                class=" text-gray-900 leading-none text-lg">{{
                                                                     m_donation.donor_name }}</p>
-                                                            <p v-else class="text-gray-900 leading-none text-lg font-bold">
+                                                            <p v-else class="text-gray-900 leading-none text-lg">
                                                                 Anonymous</p>
                                                             <p class="text-gray-600 text-sm">{{ formatDate(m_donation.date) }}
                                                             </p>
@@ -546,7 +563,7 @@
             </div> -->
             <div>
                 <button
-                    class="mb-5 rounded-lg bg-[#40b751] text-white active:bg-[#40b751] hover:border-green-600 uppercase text-sm px-6 py-3 shadow hover:bg-white hover:text-black hover:border-green-500 hover:border-2mr-1 ease-linear transition-all duration-150"
+                    class="mb-5 ml-2 rounded-lg bg-[#40b751] text-white active:bg-[#40b751] hover:border-green-600 uppercase text-sm px-6 py-3 shadow hover:bg-white hover:text-black hover:border-green-500 hover:border-2mr-1 ease-linear transition-all duration-150"
                     type="button" @click="donate(total_price, anonymous)"> donate now
                 </button>
             </div>
@@ -582,7 +599,13 @@
                     close() // closes dialog
                 },
             },
-            { label: 'Cancel' },
+            { 
+                label: 'Cancel',
+                handler: ({ close }) => {
+                    this.cancel()
+                    close() // closes dialog
+                },
+            },
         ],
     }" v-model="showDialog" />
     <!-- <div>item_cart{{ item_cart }}</div><br> -->
@@ -591,7 +614,7 @@
     <!-- <input type="text" v-model="name"/>
     <button @click="get_cookies(name)">get</button><br>
     <button @click="delete_cookies('item')">del</button><br>
-    <button @click="set_cookies()">set</button><br> -->
+    <button @click="set_cookies()">set</button><br>  -->
     <!-- {{ item_cart }} -->
 
     <Footer />
@@ -681,7 +704,7 @@ export default {
         this.get_campaign_donation_detail(name.params.name)
         this.get_recent_donation(name.params.name)
         this.get_generous_donation(name.params.name)
-        
+
         var item_cart = this.get_cookies('item')
         var i_qty = this.get_cookies('i_qty')
         var total_price = this.get_cookies('total_price')
@@ -690,18 +713,19 @@ export default {
             this.item_cart = item_cart
         }
         if(i_qty != null){
-            this.i_qty = i_qty
+            this.i_qty = parseInt(i_qty)
         }
         if(total_price != null){
-            this.total_price = total_price
+            this.total_price = parseInt(total_price)
         }
         if(item_b != null){
             this.item_b = item_b
         }
+
+        
         // console.log("a", a)
     },
     mounted() {
-
         // var a = this.get_cookies('item')
         // console.log("a", a)
                 // const timeDiff = Math.abs(this.campaign_end_date.getTime() - this.campaign_start_date.getTime());
@@ -780,6 +804,10 @@ export default {
                     // })
                     this.donated_amount = res[0]
                     this.donation_name = res[1]
+                    this.delete_cookies('item')
+                    this.delete_cookies('item_b')
+                    this.delete_cookies('i_qty')
+                    this.delete_cookies('total_price')
                     this.showDialog = true
 
                     // this.$router.push(`/sadbhavna/donation-success-page/${d_amount}`)
@@ -803,13 +831,13 @@ export default {
             this.$cookies.remove(name, `/sadbhavna/campaign-donation/${this.campaign}`);
         },
         get_cookies(name){
-            console.log("asdfasdf",this.$cookies.get(name))
+            // console.log("cookies", name, this.$cookies.get(name))
             return this.$cookies.get(name)
         },
         set_cookies(name, value){
             // VueCookies.set('myCookie', '123', '1d', '/THE-ELE-16-01-2023-0001')
             // console.log("campaign", this.campaign)
-            this.$cookies.set(name, value,"1d", `/sadbhavna/campaign-donation/${this.campaign}`);
+            this.$cookies.set(name, value,"60 + 30", `/sadbhavna/campaign-donation/${this.campaign}`);
         },
 
         formatDate(dateString) {
@@ -862,6 +890,7 @@ export default {
         },
         donate(total_price, anonymous) {
             if (!this.user.isLoggedIn()) {
+                this.$cookies.set('route', `/sadbhavna/campaign-donation/${this.campaign}`);
                 this.$router.push(`/sadbhavna/auto-login`)
                 // return
             }
@@ -874,7 +903,7 @@ export default {
                     "currency": "INR",
                     "name": "Crowdfunding",
                     "description": "Test Transaction",
-                    "image": "https://crowdfunding.frappe.cloud/assets/sadbhavna_donatekart/frontend/assets/logo.2bd6bc2a.png",
+                    "image": "https://crowdfunding.frappe.cloud/files/favicon.ico",
                     // "order_id": "order_IluGWxBm9U8zJ8", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
                     handler: (response) => {
                         this.set_details_in_doctype_after_donation(total_price, anonymous, response.razorpay_payment_id)
@@ -942,12 +971,17 @@ export default {
         view_profile() {
             this.$router.push(`/sadbhavna/profile/${this.cookie.user_id}`)
         },
+        cancel(){
+            this.$router.push('/sadbhavna')
+        },
 
         increment(item, rate, qty = 1) {
             if(qty){
                 this.i_qty += 1
+                this.set_cookies("i_qty", this.i_qty)
                 if(!this.item_b.includes(item)){
                     this.item_b.push(item)
+                    this.set_cookies("item_b", this.item_b)
                 }
                 let qty1 = 0
                 this.item_cart.filter(function (elm) {
@@ -972,8 +1006,7 @@ export default {
                     // this.get_total_price()
                     this.total_price += rate
                     this.set_cookies("item", this.item_cart)
-                    this.set_cookies("item_b", this.item_b)
-                    this.set_cookies("i_qty", this.i_qty)
+                    console.log("in if total_price", this.total_price)
                     this.set_cookies("total_price", this.total_price)
                     qty1 = 0
                 }
@@ -981,8 +1014,7 @@ export default {
                     this.item_cart.push({ item: item, rate: rate, qty: qty1 + 1, amount: amount })
                     this.total_price += rate
                     this.set_cookies("item", this.item_cart)
-                    this.set_cookies("item_b", this.item_b)
-                    this.set_cookies("i_qty", this.i_qty)
+                    console.log("in else total_price", this.total_price)
                     this.set_cookies("total_price", this.total_price)
                     qty1 = 0
                 }
@@ -991,6 +1023,7 @@ export default {
 
         decrement(item, rate) {
             this.i_qty -= 1
+            this.set_cookies("i_qty", this.i_qty)
             let qty1 = 0
             this.item_cart.filter(function (elm) {
                 if (elm.item == item) {
@@ -1013,6 +1046,8 @@ export default {
                 this.item_cart.splice(i, 1)
                 this.item_cart.push({ item: item, rate: rate, qty: qty1 - 1, amount: amount })
                 this.total_price -= rate
+                this.set_cookies("item", this.item_cart)                
+                this.set_cookies("total_price", this.total_price)
 
                 if(qty1 == 1){
                     var check = this.item_cart.filter(function (elm) {
@@ -1025,6 +1060,8 @@ export default {
                         this.item_cart.splice(i, 1)
                         let a = this.item_b.indexOf(item);
                         this.item_b.splice(a, 1)
+                        this.set_cookies("item", this.item_cart)
+                        this.set_cookies("item_b", this.item_b)
                     }
                 }
             }

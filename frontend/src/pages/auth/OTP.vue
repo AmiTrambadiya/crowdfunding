@@ -60,8 +60,17 @@ export default {
             return{
                 method: 'sadbhavna_donatekart.api.api.verify_otp',
                 onSuccess: (res) => {
-                    console.log("verified", res)
-                    this.$router.push('/sadbhavna')
+                    var route = this.$cookies.get('route');
+                    console.log("route", route)
+                    if (route != null){
+                        this.$router.go(-2)
+                        // this.$router.push(route)
+                    }
+                    else{
+                        this.$router.push(`/sadbhavna`);
+                    }
+                    // console.log("verified", res)
+                    // this.$router.push('/sadbhavna')
                 },
                 onError: (error) => {
                     console.log("error", error)

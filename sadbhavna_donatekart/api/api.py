@@ -106,7 +106,7 @@ def login_with_google(email, last_name='', first_name='', image_url=''):
 
     if not user_exists:
         user = frappe.get_doc({"doctype": "User", "email": email, "last_name": last_name,
-                              "first_name": first_name, "user_image": image_url, "new_password": frappe.generate_hash(), "role_profile_name": "Donor"})
+                              "first_name": first_name, "user_image": image_url, "role_profile_name": "Donor"})
         user.insert(ignore_permissions=True)
         frappe.db.commit()
         donor = frappe.get_doc({"doctype": "Donor", "email": f"{email}", "donor_name": f"{first_name} {last_name}",
@@ -122,7 +122,6 @@ def login_with_google(email, last_name='', first_name='', image_url=''):
                 "last_name": last_name,
                 "first_name": first_name,
                 "user_image": image_url,
-                "new_password": frappe.generate_hash()
             }
         )
         doc.save(ignore_permissions=True)
